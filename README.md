@@ -9,6 +9,10 @@ Krypty is an express middleware helping you to prevent running consuming APIs mu
 
 :rocket: Using the library, the response is much better:
 
+![With krypty](https://raw.githubusercontent.com/midrissi/krypty/master/screenshots/with-krypty.png)
+
+See it in action:
+
 [![Krypty - Memory Strategy](https://img.youtube.com/vi/huUO9Qkyz9k/0.jpg)](https://www.youtube.com/watch?v=huUO9Qkyz9k)
 
 :rocket::rocket: Using the redis strategy is even better. In the demo bellow, we start an express app in two different ports (`3000` and `3001`), then we launch a request that takes `10 seconds` multiple times.
