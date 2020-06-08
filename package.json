@@ -1,0 +1,69 @@
+{
+  "name": "krypty",
+  "version": "0.1.0",
+  "description": "A library helping to prevent running consuming APIs multiple times",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "format": "prettier --write \"src/**/*.js\" \"__tests__/**/*.js\"",
+    "pretest": "npm run lint",
+    "test": "nyc --reporter=html --reporter=text mocha __tests__/**/*.test.js",
+    "prepublishOnly": "npm test",
+    "preversion": "npm run lint",
+    "release:major": "release-it major",
+    "release:minor": "release-it minor",
+    "release:patch": "release-it patch",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Mohamed IDRISSI",
+    "email": "mohamed.idrissi@wakanda.io",
+    "url": "https://github.com/midrissi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/midrissi/krypty.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "chai": "^4.2.0",
+    "coveralls": "^3.1.0",
+    "eslint": "^7.0.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.2",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.4",
+    "mocha": "^7.1.2",
+    "nodemon": "^2.0.4",
+    "nyc": "^15.0.1",
+    "prettier": "^2.0.5",
+    "release-it": "^13.6.1"
+  },
+  "peerDependencies": {
+    "redis": "^3.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && npm test",
+      "post-merge": "npm i",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "files": [
+    "index.js",
+    "strategies/*.js"
+  ],
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
