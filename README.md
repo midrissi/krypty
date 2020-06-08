@@ -3,7 +3,7 @@ Krypty
 
 Krypty is an express middleware helping you to prevent running consuming APIs multiple times.
 
-:snail: Without using the library, the response time will be like:
+:snail: Without using the library, the `response time` will be like:
 
 ![Without krypty](https://raw.githubusercontent.com/midrissi/krypty/master/screenshots/without-krypty.png)
 
@@ -15,7 +15,7 @@ See it in action:
 
 [![Krypty - Memory Strategy](https://img.youtube.com/vi/huUO9Qkyz9k/0.jpg)](https://www.youtube.com/watch?v=huUO9Qkyz9k)
 
-:rocket::rocket: Using the redis strategy is even better. In the demo bellow, we start an express app in two different ports (`3000` and `3001`), then we launch a request that takes `10 seconds` multiple times.
+:rocket::rocket: Using Redis strategy is even better. In the demo bellow, we start an express app in two different ports (`3000` and `3001`), then we launch a request that takes `10 seconds` multiple times.
 
 [![Krypty - Memory Strategy](https://img.youtube.com/vi/pQUDQ3_LUUg/0.jpg)](https://www.youtube.com/watch?v=pQUDQ3_LUUg)
 
@@ -40,7 +40,7 @@ app.use('/long', [
 app.listen(process.env.PORT || 3000);
 ```
 
-## Using with Redis
+## Using Redis Strategy
 
 ```javascript
 const { redis } = require('krypty');

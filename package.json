@@ -1,6 +1,6 @@
 {
   "name": "krypty",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A library helping to prevent running consuming APIs multiple times",
   "main": "index.js",
   "scripts": {
