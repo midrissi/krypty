@@ -1,5 +1,4 @@
 const { EventEmitter } = require('events');
-// eslint-disable-next-line import/no-unresolved
 const { createClient } = require('redis');
 
 class RedisCache extends EventEmitter{

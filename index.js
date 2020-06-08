@@ -103,7 +103,7 @@ exports.memory = (opts = {}) => this.cache({
 exports.redis = (opts = {}) => {
   // eslint-disable-next-line global-require
   const RedisStrategy = require('./strategies/redis');
-  const { initValue, timeout, ...redisOpts } = opts;
+  const { initValue = '__INIT_VALUE__', timeout, ...redisOpts } = opts;
 
   return this.cache({
     timeout,
