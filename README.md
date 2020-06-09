@@ -5,11 +5,11 @@ Krypty is an express middleware helping you to prevent running consuming APIs mu
 
 :snail: Without using the library, the `response time` will be like:
 
-![Without krypty](https://raw.githubusercontent.com/midrissi/krypty/master/screenshots/without-krypty.png)
+![Without krypty](./screenshots/without-krypty.png)
 
 :rocket: Using the library, the response is much better:
 
-![With krypty](https://raw.githubusercontent.com/midrissi/krypty/master/screenshots/with-krypty.png)
+![With krypty](./screenshots/with-krypty.png)
 
 See it in action:
 
