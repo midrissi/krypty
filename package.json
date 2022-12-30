@@ -39,7 +39,7 @@
     "eslint-plugin-import": "^2.20.2",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.4",
-    "mocha": "^7.1.2",
+    "mocha": "^10.2.0",
     "nodemon": "^2.0.4",
     "nyc": "^15.0.1",
     "prettier": "^2.0.5",
